@@ -1,25 +1,13 @@
-export const TASK_STATUS = {
-  BACKLOG: "Backlog",
-  IN_PROGRESS: "In Progress",
-  DONE: "Done",
-} as const;
+export type Status = "Backlog" | "In Progress" | "Done";
 
-export type TaskStatus = (typeof TASK_STATUS)[keyof typeof TASK_STATUS];
-
-export const TASK_PRIORITY = {
-  LOW: "Low",
-  MEDIUM: "Medium",
-  HIGH: "High",
-} as const;
-
-export type TaskPriority = (typeof TASK_PRIORITY)[keyof typeof TASK_PRIORITY];
+export type Priority = "Low" | "Medium" | "High";
 
 export interface Task {
   id: string;
   title: string;
   description: string;
-  status: TaskStatus;
-  priority: TaskPriority;
+  status: Status;
+  priority: Priority;
   assignee: string;
   tags: string[];
   createdAt: string;

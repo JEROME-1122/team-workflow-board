@@ -1,7 +1,25 @@
-
+import "./App.css";
+import Board from "./pages/Board";
+// import Button from "./components/ui/Button";
+// import Select from "./components/ui/Select";
+// import TextArea from "./components/ui/TextArea";
+// import TextInput from "./components/ui/TextInput";
+// import TaskForm from "./features/tasks/TaskForm";
 
 function App() {
-  return <div>App</div>;
+  return (
+    <>
+      {/* <div className="grid grid-cols-4 gap-4 p-4 items-center justify-center ">
+        <TextInput />
+        <Select />
+        <TextArea />
+        <Button />
+      </div> */}
+      {/* <TaskForm /> */}
+
+      <Board />
+    </>
+  );
 }
 
 export default App;
